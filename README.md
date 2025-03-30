@@ -26,6 +26,9 @@ Using the software Trimmomatic, we can remove low quality bases to maintain high
 Step 2- Metagenome assembly
 Using quality checked DNA reads sequences in FASTQ format as input data, the next step is metagenome assembly using Megahit for DNA assembly. Megahit is a software used for more complex NGS reads. The purpose of this step is to merge overlapping sequences into a longer DNA sequence instead. The output data is assembled genomic sequences. 
 
+## Week 16 
+This week I will be focusing on the report writing the introduction and methods. I will also start on answering the questions for grade 4. 
+
 ## Week 17 
 
 Step 3- Binning
@@ -41,7 +44,7 @@ This method helps me understand how common each organism is in each bin. The inp
 Step 6- Basic phylogenetic placement of bins (Taxonomic ID)
 The purpose of this step is identifying the different organisms by assigning different taxonomic IDs to the organisms in the sample based on the information found in the genome database GTDB. This is done by comparing the input which is the high-quality bins we generated in step 4 to the GTDB-Tk software. The output generated would be a classification of the bins using the taxonomic ID. 
 
-## Week 18
+## Week 18-20
 
 Step 7- Functional annotation 
 The software Prokka is used in online Uppmax for functional annotation. The input is the best quality bins containing the DNA sequences and the output is functional gene annotations. The software is for functional annotations of already predicted sequences. 
