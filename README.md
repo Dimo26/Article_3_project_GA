@@ -1,7 +1,7 @@
 # Project plan for article 3
 ## Aim
 
-The aim of the project is to discover which organism has the most impact in contributing to the low dissolved oxygen in the dead zone based on their metagenomics and metatranscriptomic data. 
+The aim of the project is to discover which organism has the most adaptation in the low dissolved oxygen in the dead zone based on their metagenomics and metatranscriptomic data. 
 
 ## Data and organisation 
 The data I will be handling will be metagenomics and metatranscriptomic data DNA (to identify the different bacteria) and RNA. Metagenomics data provides with information about the functional genetic material. The understanding of metagenomics helps us connect and understand the functions within bacteria such as enzyme activity and metabolism.  When combined with metatranscriptomic data information about expressed activity of the bacteria is provided. This helps us understand the behaviours of the bacteria (Thomas et al. 2012). 
