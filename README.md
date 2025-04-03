@@ -24,7 +24,7 @@ FastQC checks the quality of the raw data and reports the results in a report wh
 Using the software Trimmomatic, we can remove low quality bases to maintain high quality reads in RNA. The software is fast and can trim crop FASTQ. The input data used is the raw data in FASTQ format. The output data will be FASTQ format files of clean and trimmed data. FastQC software is applied again on the trimmed FASTQ to check for improved quality post trimming. This helps us confirm if the trimming with Trimmomatic has worked properly. 
 
 Step 2- Metagenome assembly
-Using quality checked DNA reads sequences in FASTQ format as input data, the next step is metagenome assembly using Megahit for DNA assembly. Megahit is a software used for more complex NGS reads. The purpose of this step is to merge overlapping sequences into a longer DNA sequence instead. The output data is assembled genomic sequences. 
+Using quality checked DNA reads sequences in FASTQ format as input data, the next step is metagenome assembly using Megahit for DNA assembly. Megahit is a software used for more complex NGS reads. The purpose of this step is to merge overlapping sequences into a longer DNA sequence instead. The output data is assembled genomic sequences. I will also evaluate the assembly using Quast. 
 
 ## Week 16 
 This week I will be focusing on the report writing the introduction and methods. I will also start on answering the questions for grade 4. 
@@ -37,17 +37,17 @@ Binning is done after Metagenome assembly where the input is the assembled genom
 Step 4- Quality check of assembly and bins
 Binning evaluation is done to ensure that the binning worked properly and what the content of the bins is. The evaluation is done statistically by the CheckM software. CheckM compares the GC content and the size of the bins. This helps us confirm if the bins contain the entire genome i.e. only one organism or only certain parts of the genome i.e. multiple organisms. The input would be the grouped bins generated in binning and the output will be statistical results of the bins and the quality of the binning. 
 
-Step 5-  Abundance of different organisms/bins
-
-This method helps me understand how common each organism is in each bin. The input will be the metagenomics data assembled in step 2, the grouped bins in step 4 and the original RNA, DNA FastQ files. The output data includes the files from mapping, statistics of the assembled data and the quantity of the bins. This is done using mapping tools BWA for mapping the metagenomics reads of DNA and bacterial RNA. Using countM I would count the number of reads per bin. To finally determine the abundance, I would take the reads of the bins divided by the total reads in all bins. This will give me the abundance of organisms in percent. 
-
-Step 6- Basic phylogenetic placement of bins (Taxonomic ID)
+Step 5- Basic phylogenetic placement of bins (Taxonomic ID)
 The purpose of this step is identifying the different organisms by assigning different taxonomic IDs to the organisms in the sample based on the information found in the genome database GTDB. This is done by comparing the input which is the high-quality bins we generated in step 4 to the GTDB-Tk software. The output generated would be a classification of the bins using the taxonomic ID. 
 
 ## Week 18-20
 
-Step 7- Functional annotation 
+Step 6- Functional annotation 
 The software Prokka is used in online Uppmax for functional annotation. The input is the best quality bins containing the DNA sequences and the output is functional gene annotations. The software is for functional annotations of already predicted sequences. 
+
+Step 7-  Abundance of different organisms/bins
+
+This method helps me understand how common each organism is in each bin. The input will be the metagenomics data assembled in step 2, the grouped bins in step 4 and the original RNA, DNA FastQ files. The output data includes the files from mapping, statistics of the assembled data and the quantity of the bins. This is done using mapping tools BWA for mapping the metagenomics reads of DNA and bacterial RNA. Using countM I would count the number of reads per bin. To finally determine the abundance, I would take the reads of the bins divided by the total reads in all bins. This will give me the abundance of organisms in percent. 
 
 Step 8- Analysis of activity (expression level) of different bins.
 Differential expression is applied to count features using Htseq. Htseq is a python package which helps us count the reads that map to different genes and gene activity. The input is the trimmed RNA reads in step 1 and compare them to the functional gene annotations from step 6. The output is the expression level of the bins. 
