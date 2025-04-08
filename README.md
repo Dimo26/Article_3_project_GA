@@ -14,9 +14,7 @@ There will be 3 checkpoints for my analysis. The first checkpoint will be after 
 ## Week 14-15
 
 Step 1- Reads pre-processing (Trimming + quality check)
-The purpose of pre-processing is to check the quality of the raw data and to trim the data if required. FastQC checks the quality of the raw data and produces a report. The results will help me evaluate if additional steps are needed to improve the data quality.
-
-The software Trimmomatic removes the low quality bases to maintain high quality reads by trimming. The input data is the raw RNA sequences in FASTQ format. The generated output is FASTQ trimmed data files. The quality of the trimmed is evaluated with FASTQC to ensure improved quality. 
+The purpose of pre-processing is to check the quality of the raw data and to trim the data if required. FastQC checks the quality of the raw data and produces a report. The results will help me evaluate if additional steps are needed to improve the data quality. The software Trimmomatic removes the low quality bases to maintain high quality reads by trimming. The input data is the raw RNA sequences in FASTQ format. The generated output is FASTQ trimmed data files. The quality of the trimmed is evaluated with FASTQC to ensure improved quality. 
 
 Step 2- Metagenome assembly
 The purpose of this step is to merge overlapping sequences into a longer DNA sequence. Assembly is carried out by using the software Megahit which is used for more complex NGS reads. The input is the FASTQ DNA file and the output is assembled genomic sequences. The assembly is evaluated with the software Quast. 
