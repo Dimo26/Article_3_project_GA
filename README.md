@@ -46,13 +46,13 @@ The software Prokka is used in online Uppmax for functional annotation. The inpu
 
 Step 7-  Abundance of different organisms/bins
 
-The purpose of the method is to determine how common each organism is in each bin. The input is the metagenomics data assembled in step 2 and the grouped bins in step 3. The output data includes files from mapping, statistics of the assembled data and the quantity of the bins. 
+The purpose of the method is to determine how common each organism is in each bin. The input is the metagenomics data in step 1 and the grouped bins in step 3. The output data includes files from mapping, statistics of the assembled data and the quantity of the bins. 
 
 The method is implemented using mapping tools BWA for mapping of bacterial DNA from sample 1 and 2 to the bins. CountM is applied to count the number of reads per bin. To determine abundance, I would take the reads of the bins divided by the total reads in all bins. This will give me the abundance of organisms in percent. 
 
 Step 8- Analysis of activity (expression level) of different bins.
 
-Differential expression is applied to count features using Htseq. Htseq is a python package which helps us count the reads that map to different genes and gene activity. The input is the trimmed RNA reads in step 1 and compare them to the functional gene annotations from step 6. The output is the expression level of the bins. 
+Differential expression is applied to count features using Htseq. Htseq is a python package which helps us count the reads that map to different genes and gene activity. The input is the trimmed RNA reads in step 1 and compare them to the functional gene annotations from step 6 using alignment. The output is the expression level of the bins. 
 
 
 ## References 
