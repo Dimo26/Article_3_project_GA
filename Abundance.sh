@@ -17,7 +17,7 @@ module load samtools
 
 BINS="/home/dimam/UPPMAX_Labs/results/250422_HQ_bins"
 DNA="/home/dimam/UPPMAX_Labs"
-OUTPUT_Dir="/home/dimam/UPPMAX_Labs/results/250422_Abundance"
+OUTPUT_Dir="/proj/uppmax2025-3-3/UPPMAX_Labs/results/250422_Abundance"
 for bin in 250410_Bin_DNA_5 250410_Bin_DNA_11 250410_Bin_DNA_12 250410_Bin_DNA_24 250410_Bin_DNA_25
 do 
     bwa index $BINS/${bin}.fa
