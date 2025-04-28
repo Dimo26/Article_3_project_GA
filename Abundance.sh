@@ -21,15 +21,15 @@ OUTPUT_Dir="/home/dimam/UPPMAX_Labs/results/250422_Abundance"
 for bin in 250410_Bin_DNA_5 250410_Bin_DNA_11 250410_Bin_DNA_12 250410_Bin_DNA_24 250410_Bin_DNA_25
 do 
     bwa index $BINS/${bin}.fa
-    bwa mem $BINS/${bin}.fa $DNA/SRR4342129_1.paired.trimmed.fastq.gz $DNA/SRR4342129_2.paired.trimmed.fastq.gz | samtools view -u -b > $OUTPUT_Dir/${bin}.bam
-    samtools flagstat $OUTPUT_Dir/${bin}.bam > ${OUTPUT_Dir}/${bin}_flagstat.txt    
+    bwa mem $BINS/${bin}.fa $DNA/SRR4342129_1.paired.trimmed.fastq.gz $DNA/SRR4342129_2.paired.trimmed.fastq.gz | samtools view -u -b > $OUTPUT_Dir/${bin}_SRR4342129.bam
+    samtools flagstat $OUTPUT_Dir/${bin}_SRR4342129.bam > ${OUTPUT_Dir}/${bin}_SRR4342129_flagstat.txt    
 done
 
 
 for bin in 250410_Bin_DNA_5 250410_Bin_DNA_11 250410_Bin_DNA_12 250410_Bin_DNA_24 250410_Bin_DNA_25
 do
     bwa index $BINS/${bin}.fa
-    bwa mem $BINS/${bin}.fa $DNA/SRR4342133_1.paired.trimmed.fastq.gz $DNA/SRR4342133_2.paired.trimmed.fastq.gz | samtools view -u -b > $OUTPUT_Dir/${bin}.bam
-    samtools flagstat $OUTPUT_Dir/${bin}.bam > ${OUTPUT_Dir}/${bin}_flagstat.txt
+    bwa mem $BINS/${bin}.fa $DNA/SRR4342133_1.paired.trimmed.fastq.gz $DNA/SRR4342133_2.paired.trimmed.fastq.gz | samtools view -u -b > $OUTPUT_Dir/${bin}_SRR4342133.bam
+    samtools flagstat $OUTPUT_Dir/${bin}_SRR4342133.bam > ${OUTPUT_Dir}/${bin}_SRR4342133_flagstat.txt
 done
 
