@@ -1,0 +1,6 @@
+for f in /home/dimam/UPPMAX_Labs/results/250410_Bin_DNA/*_fa; do
+  mv "$f" "${f/_fa/.fa}"
+done
+
+
+
